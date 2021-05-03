@@ -1,0 +1,40 @@
+{
+  "name": "nodejs-pong-service",
+  "version": "0.0.1",
+  "description": "Simple REST API PONG Service",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "jest",
+    "clean": "rm -rf ./dist/*",
+    "build": "npm run clean && tsc --project tsconfig.json",
+    "exec": " node --experimental-modules --es-module-specifier-resolution=node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplyappdevs/nodejs-pong-service.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "rest api"
+  ],
+  "author": "SimplyAppDevs",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/simplyappdevs/nodejs-pong-service/issues"
+  },
+  "homepage": "https://github.com/simplyappdevs/nodejs-pong-service#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.1",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.5",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
