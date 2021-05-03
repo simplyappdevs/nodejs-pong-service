@@ -1,3 +1,8 @@
+/**
+ * App Imports
+ */
+import {default as loggerHelper} from './logger';
+
 (function () {
-  console.log('Hello world!');
+  loggerHelper.logInfo('MAINMODULE', 'main()', 'Hello World!');
 })();
