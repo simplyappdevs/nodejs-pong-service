@@ -9,7 +9,8 @@
     "test": "jest",
     "clean": "rm -rf ./dist/*",
     "build": "npm run clean && tsc --project tsconfig.json",
-    "exec": " node --experimental-modules --es-module-specifier-resolution=node ./dist/index.js"
+    "exec": "node --experimental-modules --es-module-specifier-resolution=node ./dist/index.js",
+    "server": "npm run build && npm run exec"
   },
   "repository": {
     "type": "git",

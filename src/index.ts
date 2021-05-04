@@ -2,7 +2,10 @@
  * App Imports
  */
 import {default as loggerHelper} from './logger';
+import {default as httpServer} from './http-server';
 
 (function () {
-  loggerHelper.logInfo('MAINMODULE', 'main()', 'Hello World!');
+  loggerHelper.logDebug('MAINMODULE', 'main()', 'Starting application ...');
+
+  httpServer();
 })();
