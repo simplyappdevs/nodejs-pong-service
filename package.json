@@ -2,15 +2,15 @@
   "name": "nodejs-pong-service",
   "version": "0.0.1",
   "description": "Simple REST API PONG Service",
-  "type": "module",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "tsc": "tsc",
     "test": "jest",
     "clean": "rm -rf ./dist/*",
     "build": "npm run clean && tsc --project tsconfig.json",
     "exec": "node --experimental-modules --es-module-specifier-resolution=node ./dist/index.js",
-    "server": "npm run build && npm run exec"
+    "start": "tsc --project tsconfig.json && npm run exec"
   },
   "repository": {
     "type": "git",

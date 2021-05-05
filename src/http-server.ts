@@ -32,6 +32,9 @@ const startServer = () => {
   try {
     logger.logDebug('startServer()', `Starting HTTP server on port ${CONSTS.PORT}`);
 
+    httpServer.use(express.json()); // for parsing application/json
+    httpServer.use(express.urlencoded({extended: true})); // for parsing application/x-www-form-urlencoded
+
     // error middleware
     httpServer.use((err: Error, req: Request, res: Response, next: NextFunction) => {
       logger.logError('startServer()', err);

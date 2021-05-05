@@ -9,7 +9,7 @@ const logger = defaultLogger.createModuleLogger('PONG');
 /**
  * Express Imports
  */
-import {default as express} from 'express';
+import {default as express, urlencoded} from 'express';
 
 // router
 const hcPong = express.Router();
@@ -22,8 +22,14 @@ hcPong.get('/*', (req, res) => {
 
   const retVal = {
     method: req.method,
-    path: req.originalUrl,
-    params: JSON.stringify(req.params)
+    hostName: req.hostname,
+    ip: req.ip,
+    baseURL: req.baseUrl,
+    originalURL: req.originalUrl,
+    params: JSON.stringify(req.params),
+    cookies: JSON.stringify(req.cookies),
+    headers: JSON.stringify(req.headers),
+    body: req.body
   };
 
   res.status(200).json(retVal);
