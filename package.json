@@ -9,8 +9,9 @@
     "test": "jest",
     "clean": "rm -rf ./dist/*",
     "build": "npm run clean && tsc --project tsconfig.json",
+    "build:docker": "npm run clean && tsc --project tsconfig.json && docker build . -t simplyappdevs/nodejs-pong-service",
     "exec": "node --experimental-modules --es-module-specifier-resolution=node ./dist/index.js",
-    "start": "tsc --project tsconfig.json && npm run exec"
+    "start": "npm run exec"
   },
   "repository": {
     "type": "git",
