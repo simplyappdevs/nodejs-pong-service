@@ -1,6 +1,6 @@
 {
   "name": "nodejs-pong-service",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simple REST API PONG Service",
   "main": "index.js",
   "type": "module",
