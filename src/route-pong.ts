@@ -9,7 +9,7 @@ const logger = defaultLogger.createModuleLogger('PONG');
 /**
  * Express Imports
  */
-import {default as express, urlencoded} from 'express';
+import {default as express} from 'express';
 
 // router
 const hcPong = express.Router();

@@ -24,6 +24,7 @@ const httpServer = express();
  */
 import hcRouter from './route-healthcheck';
 import hcPong from './route-pong';
+import hcSetCookie from './route-setcookie';
 
 /**
  * Start HTTP server
@@ -47,8 +48,9 @@ const startServer = () => {
     });
 
     // routes
-    httpServer.use('/pong', hcPong);
     httpServer.use('/healthcheck', hcRouter)
+    httpServer.use('/pong', hcPong);
+    httpServer.use('/cookies', hcSetCookie);
 
     // default middleware
     httpServer.use((req: Request, res: Response) => {
